@@ -1,3 +1,32 @@
 /* =============
     Footer
 ============= */
+footer{
+    color: var(--white);
+    
+    #footer-top{
+        background-color: var(--blue);
+        padding: 80px 0;
+
+        h1{
+            span{
+                color: var(--purple);
+            }
+        }
+        p{
+            color: var(--grey);
+        }
+    }
+
+    #footer-bottom{
+        background-color: var(--dark-blue);
+        padding: 27px 0;
+
+        p{
+            span{
+                color: var(--purple);
+            }
+        }
+    }
+}
+
