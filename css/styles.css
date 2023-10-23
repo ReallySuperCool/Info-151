@@ -17,6 +17,7 @@ html {
   --blue: #060640;
   --green: #00E5CC;
   --purple: #461096;
+  --grey: #9090A7;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -338,6 +339,21 @@ template {
 /* =============
     Typography
 ============= */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* =============
     Buttons
 ============= */
@@ -370,3 +386,22 @@ textarea {
 /* =============
     Footer
 ============= */
+#how div h1 {
+  color: var(--blue);
+}
+#how p {
+  color: var(--green);
+}
+#how ul li {
+  padding: 30px;
+  border: 2px solid var(--grey);
+  border-radius: 14px;
+  display: inline-block;
+}
+#how ul li img {
+  margin-bottom: 50px;
+}
+#how ul li h2 {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
