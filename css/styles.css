@@ -337,6 +337,10 @@ template {
 /* =============
     Base
 ============= */
+#validation-logo {
+  margin-top: 60px;
+}
+
 /* =============
     Typography
 ============= */
@@ -399,6 +403,9 @@ footer #footer-top h1 span {
 }
 footer #footer-top p {
   color: var(--grey);
+}
+footer #footer-top section h2 {
+  margin-bottom: 20px;
 }
 footer #footer-bottom {
   background-color: var(--dark-blue);
