@@ -1,0 +1,23 @@
+#newsletter{
+    background-color: var(--light-blue);
+
+    h1{
+        color: var(--blue);
+        margin-bottom: 20px;
+
+    }
+
+    p{
+        color: var(--grey);
+        margin-bottom: 12px;
+
+    }
+
+    form{
+        padding: 9px;
+        background-color: var(--white);
+        /* Temporary */
+        display: inline-block;
+        border-radius: 6px;
+    }
+}
