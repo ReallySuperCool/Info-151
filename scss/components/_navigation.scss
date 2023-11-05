@@ -2,26 +2,53 @@
     Navigation
 ============= */
 a{
-    text-decortation: none;
+    text-decoration: none;
 }
 
 
 nav{
     ul{
+        display: flex;
+        justify-content: flex-end;
         li{
+            list-style: none;
+            margin-left: 25px;
             a:link, a:visited{
                 color: var(--grey);
+                font-size: rem-calc(14);
+                font-weight: 600;
             }
 
             a:hover, a:active{
+                color: var(--codex);
 
+            }
+            
+            a.blue-link{
+
+                color: var(--codex);
+
+            }
+
+            a.blue-link:hover{
+
+                color: var(--gray);
+
+            }
+
+            a.selected{
+
+                color: var(--codex);
             }
 
         }
 
-        .selected{
-
-            color: var(--green);
+        #sign-in-btn{
+            margin-left: auto;
         }
+
+
+
+
     }
 }

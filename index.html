@@ -17,32 +17,36 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="logo pic">
+        <img src="img/logo.png" alt="logo pic">
 
         <nav>
             <ul>
-                <li class="selected">
-    
-                    <a href="#">Home</a>
-                </li>
-    
                 <li>
-                    <a href="#">About</a>
+    
+                    <a href="#" class="selected">Home</a>
                 </li>
+    
                 <li>
                     <a href="#">Services</a>
                 </li>
                 <li>
-                    <a href="#">Reviews</a>
+                    <a href="#">Testimonials</a>
                 </li>
                 <li>
+                    <a href="#">Blog</a>
+                </li>
+<!--                 <li>
                     <a href="#">Support</a>
-                </li>
-                <li>
-                    <a href="#">Sign In</a>
+                </li> -->
+                <li id="sign-in-btn">
+                    <a href="#" class="blue-link">Sign In</a>
                 </li>
                 <li id="trial">
                     <a href="#" class="blue-btn">Free Trial</a>
+                </li>
+                <li id="demo">
+                    <a href="#" class="demo-btn">Try a Live Demo</a>
+
                 </li>
             </ul>
         </nav>
@@ -50,19 +54,43 @@
 
     <section id="hero">
         <section>
-            <h1>Codext one of the best system in SAAS.</h1>
+            <div id="htc-top">
+
+                <h1>Codext is one of</h1>
+
+            </div>
+            <h1>the best systems</h1>
+
+            <div id="htc-bottom">
+                
+                <h1>in SAAS</h1>
+
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla nulla etiam turpis quam diam et. 
                 Arcu nisi, sed aenean sit nisl.</p>
 
-            <ul>
-                <li><button class="blue-btn">Get Started</button></li>
-                <li><button class="play-btn"><img src="img/freetrial.png" alt="trial"></button></li>
+            <ul id="hero-btns">
+<!--                 <li>
+                    <button class="blue-btn">Get Started</button>
+                </li>
+
+                <li>
+                    <button class="play-btn"><img src="img/freetrial.png" alt="trial"></button>
+
+                </li> -->
+                <li>
+                    <button class="de-btn"><img src="img/demo.png" alt="demo"></button>
+                    <!-- I added this section above instead of the peace sign because our format does not include an image as such -->
+                </li>
             </ul>
 
             <div id="hero-card">
-                <img src="img/marks.png" alt="quote">
-                <img src="img/stars.png" alt="rating">
-                <h4>4.9</h4>
+                <div id="card-status">
+                    <img src="img/marks.png" alt="quote">
+                    <img src="img/stars.png" alt="rating" id="card-stars">
+                    <h4>4.9</h4>
+                </div>
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A nulla nulla etiam turpis quam diam et. 
                     Arcu nisi, sed aenean sit nisl.</p>
             </div>
