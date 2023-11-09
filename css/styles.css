@@ -18,6 +18,7 @@ html {
   --green: #00E5CC;
   --purple: #461096;
   --grey: #9090A7;
+  --codex: #42B4EE;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -336,6 +337,23 @@ template {
 /* =============
     Base
 ============= */
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". main-grid-item .";
+}
+main #main-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main-grid-item;
+}
+main #main-grid-item #validation-button {
+  margin-top: 100px;
+  text-align: center;
+}
+
 /* =============
     Typography
 ============= */
@@ -366,6 +384,14 @@ button {
   color: var(--white);
   padding: 20px 28px;
   border-radius: 6px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.blue-btn:hover {
+  background-color: var(--codex);
+  color: var(--blue);
 }
 
 /* =============
@@ -399,19 +425,49 @@ textarea {
 ============= */
 #newsletter {
   background-color: var(--light-blue);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% auto;
+  grid-template-columns: 65% auto;
+  margin-top: 142px;
 }
-#newsletter h1 {
+#newsletter #newsletter-left-side {
+  padding: 60px;
+}
+#newsletter #newsletter-left-side #blue-check {
+  margin-left: 150px;
+  margin-bottom: -10px;
+}
+#newsletter #newsletter-left-side h1 {
   color: var(--blue);
   margin-bottom: 20px;
 }
-#newsletter p {
+#newsletter #newsletter-left-side p {
   color: var(--grey);
   margin-bottom: 12px;
+  line-height: 1.75rem;
 }
-#newsletter form {
+#newsletter #newsletter-left-side form {
   padding: 9px;
   background-color: var(--white);
   /* Temporary */
-  display: inline-block;
+  /* display: inline-block; */
   border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#newsletter #newsletter-left-side form input {
+  border: none;
+  margin-right: auto;
+  width: 100%;
+}
+#newsletter aside {
+  background-image: url("..img/Group.png");
+  background-size: cover;
+  background-position: right bottom;
+}
+#newsletter aside img {
+  margin-top: 3%;
+  margin-left: -130px;
 }
