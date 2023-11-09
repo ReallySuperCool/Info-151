@@ -338,9 +338,28 @@ template {
 /* =============
     Base
 ============= */
+body main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". main-content .";
+}
+body main #main-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main-content;
+}
+
 #validation-button {
   margin-top: 50px;
   text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 /* =============
@@ -408,12 +427,20 @@ textarea {
 #how p {
   color: var(--codex);
   font-weight: 600;
+  margin: 0 32%;
+}
+#how ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: lfr 30px lfr 30px lfr;
+  grid-template-columns: repeat(3, lfr);
+  gap: 30px;
 }
 #how ul li {
   padding: 30px;
   border: 2px solid var(--grey10);
   border-radius: 14px;
-  display: inline-block;
+  /*             display: inline-block; */
 }
 #how ul li img {
   margin-bottom: 50px;
