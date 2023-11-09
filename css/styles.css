@@ -19,6 +19,8 @@ html {
   --purple: #461096;
   --grey: #9090A7;
   --dark-blue: #000020;
+  --codex: #42B4EE;
+  --black:#000000;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -339,6 +341,15 @@ template {
 ============= */
 #validation-logo {
   margin-top: 60px;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
 }
 
 /* =============
@@ -385,6 +396,11 @@ textarea {
 /* =============
     Navigation
 ============= */
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
 /* =============
     Header
 ============= */
@@ -395,22 +411,100 @@ footer {
   color: var(--white);
 }
 footer #footer-top {
-  background-color: var(--blue);
+  background-color: var(--black);
   padding: 80px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". ftgi .";
 }
-footer #footer-top h1 span {
-  color: var(--purple);
+footer #footer-top #footer-top-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: ftgi;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 20% 20% auto;
+  grid-template-columns: 40% 20% 20% auto;
 }
-footer #footer-top p {
+footer #footer-top #footer-top-grid-item h1 span {
+  color: var(--codex);
+}
+footer #footer-top #footer-top-grid-item p {
   color: var(--grey);
 }
-footer #footer-top section h2 {
+footer #footer-top #footer-top-grid-item section #social-links {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer #footer-top #footer-top-grid-item section #social-links li {
+  margin-right: 16px;
+}
+footer #footer-top #footer-top-grid-item section #social-links li a:link, footer #footer-top #footer-top-grid-item section #social-links li a:visited {
+  height: 30px;
+  width: 30px;
+  border: 1px solid gray;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+footer #footer-top #footer-top-grid-item section #social-links li a:hover, footer #footer-top #footer-top-grid-item section #social-links li a:active {
+  background-color: var(--codex);
+  color: white;
+  border: 1px solid var(--codex);
+}
+footer #footer-top #footer-top-grid-item section p {
+  padding-right: 105px;
+}
+footer #footer-top #footer-top-grid-item section h1 {
   margin-bottom: 20px;
 }
-footer #footer-bottom {
-  background-color: var(--dark-blue);
-  padding: 27px 0;
+footer #footer-top #footer-top-grid-item section h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.125rem;
 }
-footer #footer-bottom p span {
-  color: var(--purple);
+footer #footer-top #footer-top-grid-item section a:link, footer #footer-top #footer-top-grid-item section a:visited {
+  color: var(--grey);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin-bottom: 12px;
+}
+footer #footer-top #footer-top-grid-item section a:hover, footer #footer-top #footer-top-grid-item section a:active {
+  color: var(--codex);
+}
+footer #footer-bottom {
+  background-color: var(--black);
+  padding: 27px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1140px auto;
+  grid-template-columns: auto 1140px auto;
+      grid-template-areas: ". fbgi .";
+}
+footer #footer-bottom #footer-bottom-grid-item {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: fbgi;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer #footer-bottom #footer-bottom-grid-item #copyright {
+  margin-right: auto;
+}
+footer #footer-bottom #footer-bottom-grid-item p span {
+  color: var(--codex);
 }

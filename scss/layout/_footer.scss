@@ -5,31 +5,103 @@ footer{
     color: var(--white);
     
     #footer-top{
-        background-color: var(--blue);
+        background-color: var(--black);
         padding: 80px 0;
+        display: grid;
+        grid-template-columns: auto 1140px auto;
+        grid-template-areas: ". ftgi .";
 
-        h1{
-            span{
-                color: var(--purple);
+        #footer-top-grid-item{
+            grid-area: ftgi;
+
+            display: grid;
+            grid-template-columns: 40% 20% 20% auto;
+
+
+            h1{
+                span{
+                    color: var(--codex);
+                }
+            }
+            p{
+                color: var(--grey);
+            }
+            section{
+                
+                #social-links{
+                    margin-top: 20px;
+
+                    display: flex;
+                    li{
+                        margin-right: 16px;
+
+                        a:link, a:visited{
+                            height: 30px;
+                            width: 30px;
+                            border: 1px solid gray;
+                            border-radius: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: 0.25s;
+                        }
+
+                        a:hover, a:active{
+                            background-color: var(--codex);
+                            color: white;
+                            border: 1px solid var(--codex);
+
+                        }
+                    }
+                    
+                }
+
+                p{
+                    padding-right: 105px;
+                }
+
+                h1{
+                    margin-bottom: 20px;
+                }
+
+                h2{
+                    margin-bottom: 20px;
+                    font-weight: 500;
+                    font-size: rem-calc(18);
+                }
+
+                a:link, a:visited{
+                    color: var(--grey);
+                    transition: 0.25s;
+                    margin-bottom: 12px;
+                }
+                a:hover, a:active{
+                    color: var(--codex);
+                }
             }
         }
-        p{
-            color: var(--grey);
-        }
-        section{
-            h2{
-                margin-bottom: 20px;
-            }
-        }
+
+
     }
 
     #footer-bottom{
-        background-color: var(--dark-blue);
+        background-color: var(--black);
         padding: 27px 0;
+        display: grid;
+        grid-template-columns: auto 1140px auto;
+        grid-template-areas: ". fbgi .";
 
-        p{
-            span{
-                color: var(--purple);
+        #footer-bottom-grid-item{
+            grid-area: fbgi;
+            display: flex;
+
+            #copyright{
+                margin-right: auto;
+            }
+            p{
+                span{
+                    color: var(--codex);
+                }
             }
         }
     }
